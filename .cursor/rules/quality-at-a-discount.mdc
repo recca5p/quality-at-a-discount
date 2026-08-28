@@ -1,0 +1,9 @@
+---
+description: Quality-at-a-discount accumulation — load the skill router, not every market pack.
+globs:
+alwaysApply: false
+---
+
+When the user asks which stocks or ETFs to buy for long-term accumulation, or whether a named market/ticker is a true sale-off, follow the skill at `SKILL.md` in this repo.
+
+Read **only** the files that router names after you detect MARKET (vn/us/uk/de/au) and MODE (equity / ai-semis / real-assets). Do not load every `markets/*.md`. A Vietnam question must not load US/UK/DE/AU packs.

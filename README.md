@@ -1,28 +1,36 @@
 # Quality-at-a-Discount
 
-One screening playbook for **long-term accumulation** (tích sản). This is the **full** spec, not a summary: 10-agent committee, sector modules, red team, required output, market packs, AI/semiconductor overlay, real-asset fallback.
+Long-term accumulation playbook: high-quality business, hard to replace, **true sale-off**. Valid output is zero names.
 
-Core, unchanged across markets:
+Split on purpose so an agent **does not load every market**.
 
-1. The business is high quality and hard to replace.
-2. The price is a **true sale-off**, not a dip.
-3. Hold for years. Valid output is **zero names**.
+```
+SKILL.md                 <- router only (always)
+core.md                  <- 10-agent committee, score, output
+sectors.md               <- banks / tech / cyclicals / property / brokers
+markets/vn.md            <- only if MARKET=VN
+markets/us.md            <- only if MARKET=US
+markets/uk.md
+markets/de.md
+markets/au.md
+overlays/ai-semis.md     <- only if AI/chip/hyperscaler-capex
+overlays/real-assets.md  <- gold/metals/oil, or empty equity screen
+.cursor/rules/quality-at-a-discount.mdc
+```
 
-`MARKET` is a variable: **VN · US · UK · DE · AU**. The file auto-routes from the question. AI/semiconductor names must pass the cycle overlay before valuation. If nothing clears, cash or a real-asset sleeve (gold, silver, metals, fertilizer, oil).
+## Load graph
 
-## Use in Grok Bot / Cursor
-
-This is a [Cursor skill](https://docs.cursor.com) (`SKILL.md`).
-
-- In Grok Bot: type `/` or `@` and pick **Quality-at-a-Discount**, or ask in Vietnamese/English (“screen Mỹ”, “FPT có rẻ không”, “NVDA có phải bong bóng chip”, “không có cổ phiếu thì ETF vàng”).
-- The agent must run the **full 10-agent** sequence. A PE+ROE shortcut is a miss.
-
-## Files
-
-| File | What |
+| User asks | Read |
 |---|---|
-| [`SKILL.md`](./SKILL.md) | Full playbook (~700+ lines): router, 10 agents, 100-point score, hard fails, sector modules, sale-off test, output template, VN/US/UK/DE/AU packs, AI overlay, real assets |
+| VN stocks | `SKILL.md` → `core.md` → `sectors.md` → `markets/vn.md` |
+| US stock, not semis | `core.md` + `sectors.md` + `markets/us.md` |
+| NVDA / TSM / ASML | those + `overlays/ai-semis.md` |
+| Gold / oil / empty screen | `overlays/real-assets.md` |
+
+## Grok Bot / Cursor
+
+Type `/Quality-at-a-Discount` or just ask (“screen the US”, “is FPT cheap”, “is NVDA a chip bubble”). The router picks files. Do not paste this repo into chat.
 
 ## License
 
-MIT. Use, copy, adapt. Not investment advice. Numbers in any run must come from dated filings — never invented.
+MIT. Not investment advice. Numbers must come from dated filings.
