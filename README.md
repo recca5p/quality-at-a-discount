@@ -37,3 +37,10 @@ Type `/Quality-at-a-Discount` or just ask (“screen the US”, “is FPT cheap�
 ## License
 
 MIT. Not investment advice. Numbers must come from dated filings.
+
+## Related
+
+Same owner, different job. Do not mix this playbook with session LONG/SHORT.
+
+- Codex trading skills (manual advisory, Hybrid M5): https://github.com/recca5p/market-data-acquisition
+- Discover both under GitHub topic [`skills`](https://github.com/search?q=topic%3Askills+user%3Arecca5p) on `recca5p`.
