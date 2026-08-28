@@ -48,7 +48,7 @@ Do not average opinions. Name the data that matters and unresolved conflicts.
 
 **9 Portfolio** — core / cyclical / tactical / avoid; max weight; deploy now vs wait; very-good / good / fair / expensive in **local currency**, split-adjusted; add rules; **do-not-average-down** rules; trim/exit. Weight by certainty, MOS, leverage, cyclicity, liquidity, FX, correlation. A world-index mega-cap is worse diversification than it looks.
 
-**10 Committee** — do not average. One label: Strong buy / Accumulate / Probe / Hold no add / Watch wait for price / Avoid on valuation / Avoid on quality / Cycle-trade only. AI overlay hard-fail blocks Strong buy / Accumulate.
+**10 Committee** — do not average. Run `lenses.md` before a buy label. One label: Strong buy / Accumulate / Probe / Hold no add / Watch wait for price / Avoid on valuation / Avoid on quality / Cycle-trade only. AI overlay hard-fail **or** competence=`cannot` blocks Strong buy / Accumulate. If recommending an action, Read `sizing.md` and emit expected value (no single target price).
 
 ## Score / 100
 
@@ -93,7 +93,7 @@ Developed markets rarely offer crisis multiples on fortress businesses. A 20–3
 10. Thesis breakers (numbers)
 11. Action: % of a position, wait for next print?, add, do-not-average-down, hold period, FX
 
-Empty screen: say empty, then cash or `overlays/real-assets.md`. Do not fill the page.
+Empty screen: say empty, then cash or `overlays/real-assets.md`. Do not fill the page. Action recommendations also need the `sizing.md` block (EV, excess vs index, size_rec).
 
 ## Final rules
 

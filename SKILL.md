@@ -43,12 +43,13 @@ After detection, **Read only these files** (in order). Stop. Do not browse the f
 
 | Case | Files |
 |---|---|
-| Equity, one market | `core.md` → `sectors.md` → `markets/<market>.md` |
-| Equity + bank/tech/consumer/etc. | same; sector extra is already in `sectors.md` + the market file |
-| `AI_OVERLAY` | those three, **then** `overlays/ai-semis.md` **before** scoring valuation |
-| `REAL_ASSETS` only | `overlays/real-assets.md` (skip `core.md` unless you are scoring a miner as a business) |
+| Equity, one market | `core.md` → `lenses.md` → `sectors.md` → `markets/<market>.md` |
+| Equity + bank/tech/consumer/etc. | same |
+| Recommending buy / sell / size / target | those, **then** `sizing.md` |
+| `AI_OVERLAY` | equity files, **then** `overlays/ai-semis.md` **before** valuation |
+| `REAL_ASSETS` only | `overlays/real-assets.md` (skip `core.md` unless scoring a miner as a business) |
 | Equity empty → ballast | `overlays/real-assets.md` after the equity files |
-| Two markets named | `core.md` + `sectors.md` + **each** named `markets/*.md` — still skip the others |
+| Two markets named | `core.md` + `lenses.md` + `sectors.md` + **each** named `markets/*.md` — skip the others |
 
 `<market>` is `vn` `us` `uk` `de` `au`.
 
@@ -56,6 +57,6 @@ After detection, **Read only these files** (in order). Stop. Do not browse the f
 
 ## 3. Then run
 
-Follow `core.md` (10-agent committee, score, hard fails, sale-off test, 11-point output). Apply the market pack. If AI overlay hard-fails → no Strong buy / Accumulate. If the whole screen is empty → say so, then cash or real assets.
+Follow `core.md` (10-agent committee) then `lenses.md` (competence, opportunity cost vs **index**, extra investor/institution gates). Apply the market pack. If you will recommend an action, Read `sizing.md` (expected value, not a single target price). If AI overlay hard-fails → no Strong buy / Accumulate. If the whole screen is empty → say so, then cash or real assets.
 
 Committee label (required): Strong buy / Accumulate / Probe / Hold no add / Watch wait for price / Avoid on valuation / Avoid on quality / Cycle-trade only.

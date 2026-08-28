@@ -7,6 +7,8 @@ Split on purpose so an agent **does not load every market**.
 ```
 SKILL.md                 <- router only (always)
 core.md                  <- 10-agent committee, score, output
+lenses.md                <- extra investor/institution gates (with core)
+sizing.md                <- buy/sell/size/EV, only when recommending action
 sectors.md               <- banks / tech / cyclicals / property / brokers
 markets/vn.md            <- only if MARKET=VN
 markets/us.md            <- only if MARKET=US
@@ -22,8 +24,9 @@ overlays/real-assets.md  <- gold/metals/oil, or empty equity screen
 
 | User asks | Read |
 |---|---|
-| VN stocks | `SKILL.md` → `core.md` → `sectors.md` → `markets/vn.md` |
-| US stock, not semis | `core.md` + `sectors.md` + `markets/us.md` |
+| VN stocks | `SKILL.md` → `core.md` → `lenses.md` → `sectors.md` → `markets/vn.md` |
+| US stock, not semis | those with `markets/us.md` |
+| Buy/sell/size/target | those + `sizing.md` |
 | NVDA / TSM / ASML | those + `overlays/ai-semis.md` |
 | Gold / oil / empty screen | `overlays/real-assets.md` |
 
