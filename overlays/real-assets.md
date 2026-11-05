@@ -4,6 +4,8 @@ Use when the equity screen is empty or the user asked for gold, silver, industri
 
 Cash in the listing currency (USD T-bills, VND deposits) is a valid waiting room. Do not “do something” with commodities. Size so you can still buy stocks when a sale-off appears. No leverage, no 2x/3x, no option overlays.
 
+If gold/silver/metals/fertilizer/oil/gas **fail** the cheap test (0 yield vs positive real rates, mid-to-peak deck, or insurance already rerated), **do not stretch bullion to fill the page**. Stop this file and Read `overlays/waiting-room.md`.
+
 ## Instrument order
 
 1. Physically allocated bullion ETF (or a metals/energy fund with transparent holdings) when you want the **price of the stuff**
@@ -23,8 +25,20 @@ Gold/silver have **no earnings yield**. Hurdle is opportunity cost vs real rates
 
 ## Sizing
 
-If equities are all watch/wait: bullion first, then optionally mid-cycle energy or copper. Fertilizer/lithium smaller. Do not stack gold ETF + gold miners + AUD + iron ore + oil (one risk-on commodity factor). Trim this sleeve when an equity name enters the good/very-good zone.
+If equities are all watch/wait: size bullion **only** if it is actually cheap vs real rates and vs cash. Otherwise do not buy metal — go to `overlays/waiting-room.md`. Optionally mid-cycle energy or copper only on a **low** deck. Fertilizer/lithium smaller. Do not stack gold ETF + gold miners + AUD + iron ore + oil (one risk-on commodity factor). Trim this sleeve when an equity name enters the good/very-good zone.
 
-## Output
+## Output (equal depth to equity — no stub)
 
-Why equities did not clear (or “user asked for ballast”); instrument table (ticker, physical/futures/producer, TER, liquidity, what you actually own); cycle trough/mid/peak; price deck; for producers: AISC/netback, net debt, FCF at the **low** deck, dilution; gold: real-rate and USD/VND, miner vs bullion; roll-yield warning; sleeve weights + trim rule that frees cash for a stock sale-off; hard avoids.
+Same seriousness as a VN equity universe table. **0 names is valid.**
+
+1. One-line why equities did not clear (or “user asked for ballast”) + macro one-liner (real rates, USD/VND, oil shock).
+2. **Ballast universe table** — every sleeve actually checked (gold spot, SJC if VND spender, silver, copper/iron if used, urea, potash, WTI/Brent at minimum when in mode):
+   - level / unit, % vs 12m peak (and vs cycle mid if known)
+   - cheap test used (vs real yield / mid-cycle deck / cash yield)
+   - cycle label trough/mid/peak
+   - committee-style verdict: Probe ballast / Watch / Avoid not cheap / Cycle-trade only
+   - one-line fail or pass + source+date
+3. Instrument path if any buy: ticker, physical vs futures vs producer, TER, liquidity, what you own.
+4. Producers only if considered: AISC/netback, net debt, FCF at **low** deck, dilution.
+5. Sleeve weights + trim rule that frees cash for a stock sale-off; hard avoids.
+6. If nothing is cheap → explicit handoff to `overlays/waiting-room.md` (unfinished without it).

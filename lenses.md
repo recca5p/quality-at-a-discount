@@ -10,7 +10,8 @@ Can we describe, in numbers, how cash arrives and what it looks like in 10 years
 
 - `cannot` → no Strong buy / Accumulate (same severity as a quality hard-fail).
 - `partial` → Probe cap only.
-- Fast-changing industries, person-as-moat, policy-only banks, thin listings, pre-revenue stories: default `cannot` unless mid-cycle owner earnings are underwritable from filings.
+- Fast-changing industries, person-as-moat, thin listings, pre-revenue stories: default `cannot` unless mid-cycle owner earnings are underwritable from filings.
+- **Policy-influenced banks:** default `partial` (Probe cap) when credit quality, NIM, LLR/NPL, and deposit franchise are underwritable from filings; use `cannot` only if those owner metrics cannot be estimated. “Policy bank” alone is not a hard fail.
 
 ## B. Opportunity cost (Buffett / Munger / Dodge & Cox)
 
@@ -26,7 +27,14 @@ Every dollar has a next use. Compute, all in **local currency**, then in the spe
 | `excess_vs_index_bp` | (`idea_er` − `index_er`) × 10000 |
 | `next_best` | Named: cash / ballast / a watchlist ticker |
 
-**Kill Accumulate** if `excess_vs_index_bp` < **+200** after costs/tax/FX, or if `next_best` has equal-or-better quality at higher EV. Leaving the home market is allowed only when the foreign name clears the **same** quality bar after country-risk, FX, and tax — not because GDP is high (GMO/Swensen). Home-index concentration (Vin-skew, Mag-7) is a reason to look, not a reason to buy junk abroad.
+**Label caps (severity):**
+
+- `excess_vs_index_bp` < **+200** after costs/tax/FX → **no Accumulate / Strong buy**. Probe / Watch wait for price remain allowed if quality and price-zone bars clear.
+- If `next_best` has equal-or-better quality at higher EV → prefer that name (or cash); do not force the weaker idea.
+
+**When the default index is 2-sigma expensive / euphoric (Marks/GMO):** do **not** plug a long-run historical `index_er` (that falsely kills ideas). Set `index_er` to a **depressed forward real** assumption consistent with rich starting valuation (state it), *or* mark `index_er` UNKNOWN and gate Accumulate mainly on `excess_vs_rf_bp` ≥ **+200** plus MOS. Expensive tape makes cash/waiting-room more attractive; it must not make *relative* excess impossible by using optimistic index ER.
+
+Leaving the home market is allowed only when the foreign name clears the **same** quality bar after country-risk, FX, and tax — not because GDP is high (GMO/Swensen). Home-index concentration (Vin-skew, Mag-7) is a reason to look, not a reason to buy junk abroad.
 
 ## C. Wonderful vs cigar (Buffett 1989; Graham eras)
 
@@ -75,13 +83,29 @@ A screen can still love these; these lenses usually should not:
 | Cheap bank leaving the coverage fortress, CRE accelerating | `markets/vn.md` + this file’s leverage flag |
 | Foreign listing because “developed markets are wiser” | GMO / this file §B |
 
-## I. Behavior gate (yes/no, all must be yes for Accumulate)
+## I. Behavior gate (Accumulate / Strong buy)
 
-1. Would I buy more at this price with cash I need in < 3 years? (if yes → you are trading, not accumulating)
-2. Am I buying because it went down, or because IV is higher than price?
-3. Did I write the bear case before the bull?
-4. Is this inside competence (`full`)?
-5. Is `next_best` worse on quality **and** EV?
-6. Would I still buy if I could not sell for 5 years?
-7. Am I sizing from conviction theatre or from MOS + liquidity?
-8. Pre-mortem: “It is 2029 and this lost 40%. The reason was: ____.” If that reason is already visible in filings, do not buy.
+Score each **pass/fail**. Accumulate requires **all pass**. One fail → cap at Probe / Watch / Hold — **not** automatic Avoid and **not** empty screen.
+
+1. Am I using money I need in < 3 years? → **fail if yes** (that is trading, not accumulating). Pass = no.
+2. Am I buying because it went down, or because IV is higher than price? → pass only if IV > price (MOS), not “it fell.”
+3. Did I write the bear case before the bull? → pass = yes.
+4. Is competence at least what the label needs? (`full` for Accumulate; `partial` OK for Probe only)
+5. Is `next_best` worse on quality **and** EV? → pass = yes (idea wins).
+6. Would I still buy if I could not sell for 5 years? → pass = yes.
+7. Am I sizing from MOS + liquidity, not conviction theatre? → pass = yes.
+8. Pre-mortem: “It is 2029 and this lost 40%. The reason was: ____.” If that reason is already visible in filings → **fail** (do not buy).
+
+## J. BUY-WHEN checklist (anti-paralysis)
+
+Before defaulting to waiting-room, run this. If all true, prefer an equity label over cash:
+
+1. Moat / quality not hard-failed; earning power underwritable.
+2. Balance sheet can survive the mispricing (local recession).
+3. Price in **good / very-good** **or** sale-off `true` / `moderately attractive`.
+4. Bear loss acceptable; `p_ruin` not dominating EV when sizing.
+5. Competence ≠ `cannot` (partial → Probe only).
+6. Vs hurdle: `excess_vs_rf_bp` clearly positive (index excess per §B rules, including 2-sigma index handling).
+
+If (1–4) hold but (5) or (6) soft-cap: output **Probe** or **Watch wait for price** with zones — that is a **successful** equity result. Only if (1–3) fail across the universe is BUY=0 correct (then ballast / waiting-room + NOTIFY hooks on the Watch list).
+

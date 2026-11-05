@@ -25,7 +25,7 @@ Haircut `p_base` by a **base rate**: what happened to similar names (same sector
 ## 2. Hurdles already computed in `lenses.md`
 
 Repeat in the action block: `excess_vs_rf_bp`, `excess_vs_index_bp`, `next_best`, competence.  
-Accumulate requires competence=`full`, `excess_vs_index_bp` ≥ **+200**, behavior gate all-yes, and `p_ruin` not dominating EV.
+Accumulate requires competence=`full`, `excess_vs_index_bp` ≥ **+200** (or `excess_vs_rf_bp` ≥ **+200** when `index_er` is UNKNOWN under 2-sigma expensive tape — see `lenses.md` §B), behavior gate all-pass, and `p_ruin` not dominating EV. Thin index excess alone does **not** forbid Probe.
 
 ## 3. Position caps (take the **min**)
 
@@ -48,7 +48,8 @@ Use the `core.md` price zones. Then:
 
 | Action | When |
 |---|---|
-| **Do not buy** | Any hard-fail; competence `cannot`; behavior gate fail; `excess_vs_index_bp` < +200 |
+| **Do not buy** | Any hard-fail; competence `cannot` |
+| **No Accumulate / Strong buy** | Behavior gate fail; `excess_vs_index_bp` < +200 (Probe still allowed per `lenses.md` §B); competence `partial` |
 | **Probe** | Partial competence or MOS thin; 2% cap; wait for next print if a number is UNKNOWN and material |
 | **Accumulate** | Full competence, true sale-off or moderately attractive, EV skewed up, zones good/very-good |
 | **Add** | Still in good/very-good **and** thesis intact **and** below `size_rec` |
