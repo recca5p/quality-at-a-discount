@@ -9,15 +9,16 @@ Load on every equity, ballast, waiting-room, or sale-off routine run (see router
 | **US** | Fed path (hike/hold/cut + guidance), 10y UST, TIPS/real yield, CPI/PCE, NFP/unemployment/claims | Debt/deficit/ceiling, tariffs/trade, USD index, credit spreads |
 | **Tech / AI** | Material model, hyperscaler capex, export-control, or regulation shifts | Only if universe has semis/software/AI overlay |
 | **EU / UK / AU** | ECB / BoE / RBA stance + local CPI when that MARKET is open | Growth surprise, energy policy (DE), China demand (AU miners) |
-| **VN** | SBV policy / deposit guidance, credit growth, VND FX, CPI | Public investment, FDI, property/credit stress, fiscal |
+| **VN** | SBV policy / deposit guidance, **live Big-4 online deposit curve**, credit growth, VND FX, CPI **and GDP** (growth–inflation mix), **Vin-group index weight** | Public investment, FDI, property/credit stress, fiscal; when MARKET=VN also run full `markets/vn.md` **VN structural checklist** |
 | **Global risk** | Oil shock, war, sanctions only if it moves risk premia or names in universe | — |
 
 ## How to use
 
 1. **Hurdle / cycle:** place the tape in trough / mid / peak / unknown; note if real rates rose/fell since last screen.
-2. **Pre-sale-off flags** (raise Watch intensity, do **not** auto-buy): policy tightening into rich valuations; credit stress / NPL cycle; earnings recession risk; liquidity drain; VN deposit rates rising (higher equity bar); sudden risk-off with quality still expensive → wait for **price zones**, not the headline.
-3. **False cheap:** stimulus headlines, index rallies, or “AI boom” do not clear QAD. Falling price after a macro scare still needs MOS + quality.
-4. **Output:** 5–10 line macro block **before** universe tables; end with one line: `pre-sale-off: none | building | active` and what would confirm (e.g. “Fed hold + unemployment >X + quality FCF yield >Y”).
+2. **VN structural (when MARKET=VN or home-base hurdle binds):** after the pulse table, satisfy `markets/vn.md` structural checklist (Vin weight, CPI vs GDP, live Big-4 / user-available deposit hurdle). High deposits raise the equity bar; Vin-skew voids index-cheap narratives.
+3. **Pre-sale-off flags** (raise Watch intensity, do **not** auto-buy): policy tightening into rich valuations; credit stress / NPL cycle; earnings recession risk; liquidity drain; VN deposit rates rising (higher equity bar); sudden risk-off with quality still expensive → wait for **price zones**, not the headline.
+4. **False cheap:** stimulus headlines, index rallies, or “AI boom” do not clear QAD. Falling price after a macro scare still needs MOS + quality.
+5. **Output:** 5–10 line macro block **before** universe tables; include the `VN structural: …` one-liner when VN applies; end with one line: `pre-sale-off: none | building | active` and what would confirm (e.g. “Fed hold + unemployment >X + quality FCF yield >Y”).
 
 ## Do not
 

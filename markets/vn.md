@@ -26,9 +26,21 @@ FPT/CMG/ELC = IT services / SI / telecom / education. Not an AI-product stock. J
 
 Steel, fertilizer, chemicals, brokers: mid-cycle, never H1-record NPAT. Property: default avoid unless legal + cash collected + NAV-to-cash is documented. FTSE/MSCI upgrade is not a thesis (T1 is small vs foreign selling).
 
+## VN structural checklist (mandatory on EVERY VN equity valuation)
+
+Before labeling any VN name cheap / Probe / Accumulate / Avoid, fetch **live** and print a short block covering these VN-specific long-horizon inputs. Skipping this block is a failed VN run. Do **not** hardcode stale numbers from memory — look up each turn (source + date).
+
+1. **Index / ownership concentration:** Vin-group (VIC/VHM/VRE and affiliates) weight in VNIndex / HOSE free-float. When Vin-skew is large (recently ~30%+ of market), treat index “cheapness” as suspect; prefer **ex-Vin** multiples and per-name zones. Concentration is a liquidity + narrative risk for long holds, not a buy signal for Vin names.
+2. **Growth vs inflation mix:** latest GDP (or GSO flash) vs CPI YoY. Flag when CPI stays elevated (e.g. >5%) while headline GDP is strong — real household purchasing power and policy-rate path matter more than GDP alone for multi-year bank/consumer multiples.
+3. **Deposit / policy hurdle (hard opportunity cost):** live Big-4 **online** VND deposit curve (VCB / BIDV / CTG / Agribank — 3m / 6m / 12m). Also note any credible high counter/online quotes the user can actually place (e.g. ~8.5–9% when that is live). Equity expected return / earnings or FCF yield (banks: ROE×(1−P/B friction) framing or clear earnings yield vs book) must clear this cash yield with MOS. If deposits pay high single digits with near-zero credit risk, “fair” P/E or P/B is capped — do not call a name cheap because it is −20% off highs.
+4. **SBV / credit / FX:** policy-rate or deposit guidance, system credit growth, USD/VND, property/CRE stress if banks or property-adjacent.
+5. **Output line (required):** `VN structural: Vin-weight≈X% | CPI Y% vs GDP Z% | Big-4 online 12m = R% (src, date) | hurdle = max(Big-4 online, user-available deposit) | implication: raise bar / neutral / lower bar`.
+
+These factors are **long-horizon** (multi-year multiples and opportunity cost), not day-trade noise. They apply even to a single-ticker ask (FPT, VCB, CTG, …).
+
 ## Index trap
 
-VNIndex can look cheap while Vin-skewed (high-PE VIC vs cheap banks). Ex-Vin multiples matter. Thin liquidity + 7–9% deposits cap multiples. Selective market ≠ buy the index.
+VNIndex can look cheap while Vin-skewed (high-PE VIC vs cheap banks). Ex-Vin multiples matter. Thin liquidity + high VND deposits (see structural checklist — look up live Big-4 online / user-available rates) cap multiples. Selective market ≠ buy the index. Always run the **VN structural checklist** above before any committee label.
 
 ## Sale-off bar
 

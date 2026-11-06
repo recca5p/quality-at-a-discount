@@ -38,7 +38,7 @@ Core rule, every market: good business, hard to replace, **true sale-off** (or c
 - **US:** Fed path (hike/hold/cut, dots/guidance), 10y UST + real yields, labor (NFP/unemployment/claims), CPI/PCE, fiscal/debt-ceiling or deficit headlines, tariffs/trade, USD.
 - **Tech/AI:** material model/capex/regulation shifts that change AI-overlay or semis/software theses.
 - **EU/UK/AU** when those markets are open: ECB/BoE/RBA stance, local CPI, growth surprises.
-- **VN:** SBV policy rate / deposit-rate guidance, credit growth, FX VND, FDI/public investment, property/credit stress, CPI.
+- **VN:** SBV policy rate / deposit-rate guidance, **live Big-4 online deposit curve** (hurdle), credit growth, FX VND, FDI/public investment, property/credit stress, CPI **vs GDP**, **Vin-group index weight**. When MARKET=VN (any single ticker too), also run `markets/vn.md` **VN structural checklist** and print the `VN structural:` line before committee labels.
 - **Geopolitics/energy** only when it moves oil, risk premia, or supply chains for names in the universe.
 
 Use macro to (a) set cycle position and hurdle context, (b) flag **pre-sale-off** setup (tightening + rich valuations, credit stress, policy shock) vs (c) avoid mistaking a macro headline for a stock that is still expensive. Macro alone never forces a buy. Cite source + date.
